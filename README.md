@@ -45,8 +45,14 @@ Please install the required python packages as noted in the `requirements.txt`
 
 This thesis proposes a novel method to optimize the duty cycle of sensors through a combination of deep learning and machine learning techniques. By using predictions from a ConvLSTM model to train a machine learning model, the optimized duty cycle is designed to achieve maximum performance metrics while minimizing energy costs. During inference, the trained deep learning model is used to make activity predictions, and the corresponding duty cycle is used to control the on-off switching of the sensors. This optimization is implemented using two popular global-search heuristics algorithms: Simulated Annealing (SA) and Genetic Algorithm (GA). The deep learning training is done through a DeepConvLSTM architecture that outperforms other architectures proposed in the literature. 
 
-<img src="Images/training_pipeline.pdf" alt="Alt text" width="200" height="200" />
-<img src="Images/inference_pipeline.pdf" alt="Alt text" width="200" height="200" />
+<p align="center">
+  <img src="Images/training_pipeline.png" alt="Alt text" width="400" height="400" />
+</p>
+
+<p align="center">
+  <img src="Images/inference_pipeline.png" alt="Alt text" width="400" height="400" />
+</p>
+
 
 
 ## Results
@@ -54,14 +60,21 @@ This thesis proposes a novel method to optimize the duty cycle of sensors throug
 ### Simulated Annealing results
 The results obtained for the RWHAR and Wetlab datasets are shown below. 
 
-<img src="Images/bar_plot_activity_rwhar_sa.png" alt="Alt text" width="200" height="200" />
-<img src="Images/bar_plot_activity_wetlab_sa.png" alt="Alt text" width="200" height="200" />
+<p align="center">
+  <img src="Images/bar_plot_activity_wetlab.png" alt="Alt text" width="400" height="400" />
+</p>
 
 ### Genetic Algorithm results
 The results obtained for the RWHAR and Wetlab datasets are shown below. 
 
-<img src="Images/bar_plot_activity_rwhar_ga.png" alt="Alt text" width="200" height="200" />
-<img src="Images/bar_plot_activity_wetlab_ga.png" alt="Alt text" width="200" height="200" />
+<p align="center">
+  <img src="Images/bar_plot_activity_rwhar_ga.png" alt="Alt text" width="400" height="400" />
+</p>
+
+<p align="center">
+  <img src="Images/bar_plot_activity_wetlab_ga.png" alt="Alt text" width="400" height="400" />
+</p>
+
 
 Repo Structure
 * data_processing: contains file for data processing (analysis, creation, preprocessing and sliding window approach)
@@ -71,6 +84,7 @@ Repo Structure
 * skip_heuristics_scripts: folder containing implementation of skipping algorihtm.
 * main.py: main script which is to be run in order to commence experiments
 * ml_validate: script used to produce validation results. 
+* ml_evaluate: script used to produce bar graphs ahown in results. 
 
 
 ## References
